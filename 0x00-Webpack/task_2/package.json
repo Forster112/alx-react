@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "jquery": "^3.6.3",
-    "lodash": "^4.17.21"
-  },
-  "description": ""
+    "lodash": "^4.17.21",
+    "semver-regex": "^4.0.5",
+    "uuid": "^7.0.3"
+  }
 }
