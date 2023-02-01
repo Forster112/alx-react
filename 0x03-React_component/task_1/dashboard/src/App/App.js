@@ -42,6 +42,10 @@ class App extends React.Component {
     window.addEventListener('keydown', this.handleKeyDown)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+  }
+
   render(){
     return (
       <React.Fragment>
