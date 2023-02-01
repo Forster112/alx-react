@@ -53,7 +53,7 @@ class App extends React.Component {
         <div className="App">
           < Header />
             { this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login /> }
-            < Footer />
+          < Footer />
         </div>
       </React.Fragment>
     );

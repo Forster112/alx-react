@@ -10,9 +10,11 @@ import PropTypes from 'prop-types'
 
 
 class App extends React.Component {
+  
   constructor(props){
     super(props);
   }
+
   static listCourses = [
     {id: 1, name: 'ES6', credit: 60},
     {id: 2, name: 'Webpack', credit: 20},
@@ -30,12 +32,8 @@ class App extends React.Component {
         < Notifications listNotifications={this.listNotifications} />
         <div className="App">
           < Header />
-          <div className="App-body">
             { this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login /> }
-          </div>
-          <div className="App-footer">
-            < Footer />
-          </div>
+          < Footer />
         </div>
       </React.Fragment>
     );
