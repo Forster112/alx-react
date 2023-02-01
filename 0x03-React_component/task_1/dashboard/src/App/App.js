@@ -46,18 +46,14 @@ class App extends React.Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  render(){
+  render () {
     return (
       <React.Fragment>
         < Notifications listNotifications={this.listNotifications} />
         <div className="App">
           < Header />
-          <div className="App-body">
             { this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login /> }
-          </div>
-          <div className="App-footer">
             < Footer />
-          </div>
         </div>
       </React.Fragment>
     );
