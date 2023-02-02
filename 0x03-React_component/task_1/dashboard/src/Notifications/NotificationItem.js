@@ -1,22 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function NotificationItem ({ type, value, html}) {
+function NotificationItem({ type, html, value }) {
   return (
-    value ?
-    <li data-notification-type={type}
-    >{value}</li>
-      :
+    value ? 
+    <li
+    data-notification-type={type}
+    >{value}</li> 
+    :
     <li
     data-notification-type={type}
     dangerouslySetInnerHTML={html}
-    ></li>
-  )
-};
+    ></li> 
+  );
+}
 
 NotificationItem.defaultProps = {
-  type: "default"
-}
+  type: 'default'
+};
 
 NotificationItem.propTypes = {
   html: PropTypes.shape({__html: PropTypes.string}),

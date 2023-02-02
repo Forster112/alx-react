@@ -9,13 +9,10 @@ module.exports = {
     path: path.resolve("./dist"),
   },
   devServer: {
-    overlay: true,
     hot: true,
     contentBase: path.resolve("./dist"),
     compress: true,
-    transportMode: 'ws', 
-    injectClient: false,
-    port: 3000,
+    port: 8564,
   },
   performance: {
     maxAssetSize: 1000000,
